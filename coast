@@ -12,7 +12,7 @@ ContentProvider:PreloadAsync({"rbxassetid://3570695787", "rbxassetid://270889159
 
 local Library = {
     Theme = {
-        MainColor = Color3.fromRGB(109, 255, 255),
+        MainColor = Color3.fromRGB(153, 255, 255),
         BackgroundColor = Color3.fromRGB(35, 35, 35),
         UIToggleKey = Enum.KeyCode.RightControl,
         TextFont = Enum.Font.SourceSansBold,
@@ -121,7 +121,7 @@ local Tabs = Instance.new("Frame")
 local TabButtons = Instance.new("ImageLabel")
 local TabButtonLayout = Instance.new("UIListLayout")
 
-UILibrary.Name = "OMKUY"
+UILibrary.Name = HttpService:GenerateGUID(false)
 UILibrary.Parent = CoreGui
 UILibrary.DisplayOrder = 1
 UILibrary.ZIndexBehavior = Enum.ZIndexBehavior.Global
@@ -1574,5 +1574,3 @@ function Library:CreateTab(name)
 end
 
 return Library
-
-print("kuy")
