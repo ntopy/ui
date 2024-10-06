@@ -249,6 +249,33 @@ local function ToggleUI()
         TweenService:Create(Border, TweenInfo.new(0.5, Library.Theme.EasingStyle, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
     end
 end
+local Frame = Instance.new("Frame")
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+
+--Properties:
+
+Frame.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+ScreenGui.Parent = Frame
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.719853818, 0, 0, 0)
+ImageButton.Size = UDim2.new(0, 75, 0, 70)
+ImageButton.Image = "rbxassetid://124661137788979"
+ScreenGui.ResetOnSpawn = false
+ImageButton.MouseButton1Up:Connect(function()
+    print("hello")
+    ToggleUI()
+end)
 
 coroutine.wrap(function()
     while wait() do
@@ -1574,31 +1601,5 @@ function Library:CreateTab(name)
 end
 
 return Library
-local Frame = Instance.new("Frame")
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
 
---Properties:
-
-Frame.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Size = UDim2.new(0, 100, 0, 100)
-
-ScreenGui.Parent = Frame
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.719853818, 0, 0, 0)
-ImageButton.Size = UDim2.new(0, 75, 0, 70)
-ImageButton.Image = "rbxassetid://124661137788979"
-ScreenGui.ResetOnSpawn = false
-ImageButton.MouseButton1Up:Connect(function()
-    print("hello")
-    ToggleUI()
-end)
-
+print("kuy")
